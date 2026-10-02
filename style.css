@@ -24,20 +24,27 @@ body {
   font: 400 16px/1.55 'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 .wrap { max-width: 720px; margin: 0 auto; }
-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin-bottom: 24px; }
 .brand { font-weight: 600; font-size: 18px; text-decoration: none; color: var(--text); }
 .back { font-size: 15px; color: var(--muted); text-decoration: none; }
 .back:hover, a:hover { color: var(--brick); }
+.lang { margin-left: auto; display: flex; align-items: baseline; gap: 6px; font-size: 14px; color: var(--hint); }
+.lang a { color: var(--muted); text-decoration: none; padding: 4px 0; }
+.lang [aria-current] { color: var(--text); font-weight: 500; }
 main { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 24px 20px; }
 h1 { font-size: 21px; font-weight: 600; line-height: 1.3; margin: 0 0 4px; }
 h2 { font-size: 17px; font-weight: 600; line-height: 1.35; margin: 24px 0 8px; }
 p { margin: 0 0 10px; }
 p.i { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
+p.i + p.i { margin-top: -8px; }
 li { margin: 0 0 8px 20px; }
 a { color: var(--brick); }
 nav.docs { list-style: none; padding: 0; margin: 0; }
 nav.docs a { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--text); font-weight: 500; }
 nav.docs a:last-child { border-bottom: 0; }
 nav.docs span { display: block; font-weight: 400; font-size: 15px; color: var(--muted); margin-top: 2px; }
+.other { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+.other p { color: var(--muted); font-size: 15px; }
+.other li { list-style: none; margin: 0 0 8px; }
 footer { margin-top: 20px; color: var(--hint); font-size: 14px; }
 @media (max-width: 480px) { body { padding: 16px 16px 48px; } main { padding: 18px 16px; border-radius: 14px; } }
